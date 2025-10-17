@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PromoStar — Рекламное агентство</title>
+  <meta name="description" content="Рекламное агентство PromoStar: полиграфия, наружная реклама, сувенирная продукция, шопперы, SMM. Пермь, ул. Ленина." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222222;
+      --muted: #6b7280;
+      --brand: #FFD700;
+      --brand-dark: #c7a600;
+      --surface: #f9fafb;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+    header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.96); backdrop-filter: saturate(180%) blur(6px); border-bottom: 1px solid var(--border); }
+    .nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; justify-content: center; padding: 14px 0; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .3px; }
+.logo .wordmark { font-weight: 700; letter-spacing: .3px; }
+.logo .star { width: 20px; height: 20px; }
+.logo .wordmark { font-weight: 700; letter-spacing: .3px; }
+.logo .star { width: 22px; height: 22px; }
+    .logo-badge { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, var(--brand), #fff3a6); display: grid; place-items: center; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+    nav a { color: var(--text); text-decoration: none; font-weight: 500; margin: 0 14px; white-space: nowrap; }
+    nav a:hover { opacity: .8; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--text); color: #fff; border: none; border-radius: 12px; padding: 12px 18px; font-weight: 600; cursor: pointer; text-decoration: none; }
+    .btn:hover { background: #111; }
+    .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+    .hero { position: relative; overflow: hidden; }
+    .hero-inner { display: grid; gap: 22px; align-items: center; grid-template-columns: 1.15fr .85fr; padding: 68px 0 48px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; font-size: 13px; color: #111; background: #fff; }
+    h1 { font-size: clamp(28px, 5vw, 52px); line-height: 1.1; margin: 8px 0 6px; }
+    .lead { font-size: 18px; color: var(--muted); margin-bottom: 18px; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    section { padding: 64px 0; }
+    .sec-title { font-size: clamp(22px, 3.6vw, 36px); margin: 0 0 14px; }
+    .sec-lead { color: var(--muted); max-width: 720px; }
+
+    .grid { display: grid; gap: 18px; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 18px; text-align: center; }    .icon-svg { width: 80px; height: 80px; margin-bottom: 10px; }
+    .icon-svg .fill-brand { fill: var(--brand); }
+    .icon-svg .stroke { stroke: #111; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+    .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; border: 1px solid var(--border); }
+
+    form { display: grid; gap: 12px; }
+    .input { padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; font: inherit; }
+    textarea.input { min-height: 120px; resize: vertical; }
+    .note { font-size: 13px; color: var(--muted); }
+
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 36px 0; font-size: 14px; }
+    .foot { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; }
+
+    @media (max-width: 980px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand logo" aria-label="PromoStar — на главную" style="justify-self:start; text-decoration:none; color:inherit;">
+        <span class="wordmark">PromoStar</span>
+        <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+          <defs>
+            <linearGradient id="starHeader" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#FFD700"/>
+              <stop offset="1" stop-color="#FFE780"/>
+            </linearGradient>
+          </defs>
+          <polygon points="12,2 15,9 22,9 16.5,13.5 19,21 12,16.8 5,21 7.5,13.5 2,9 9,9" fill="url(#starHeader)"/>
+        </svg>
+      </a>
+      <nav class="menu" aria-label="Главное меню" style="justify-self:center;">
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#gallery">Портфолио</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="btn" href="#order" aria-label="Оставить заявку" style="justify-self:end;">Оставить заявку</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>Креатив. Качество. Результат.</h1>
+        <p class="lead">PromoStar — рекламное агентство нового поколения. Создаём бренды, полиграфию, сувениры и цифровую рекламу.</p>
+        <a href="#order" class="btn">Заказать проект</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="sec-title">О компании PromoStar</h2>
+      <p class="sec-lead">Мы — новая и современная команда будущего. Стандартные услуги, гибкая ценовая политика и индивидуальные решения. В каждый проект вкладываем часть души. Мы любим свою работу!</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="sec-title">Наши услуги</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <!-- Полиграфия -->
+          <svg class="icon-svg" viewBox="0 0 256 256" aria-hidden="true">
+            <rect class="stroke" x="28" y="92" width="200" height="92" rx="16"></rect>
+            <rect class="fill-brand" x="96" y="144" width="64" height="60" rx="6"></rect>
+            <rect class="stroke" x="64" y="36" width="128" height="40" rx="8"></rect>
+            <circle cx="196" cy="138" r="6" fill="#111"></circle>
+          </svg>
+          <h3>Полиграфия</h3>
+          <p>Визитки, буклеты, открытки, листовки, флаеры.</p>
+        </div>
+        <div class="card">
+          <!-- Наружная реклама -->
+          <svg class="icon-svg" viewBox="0 0 256 256" aria-hidden="true">
+            <rect class="stroke" x="28" y="44" width="200" height="108" rx="12"></rect>
+            <rect class="fill-brand" x="84" y="84" width="44" height="28" rx="6"></rect>
+            <path class="stroke" d="M128 84l44 14-44 14z"></path>
+            <path class="stroke" d="M76 152v40M180 152v40"></path>
+          </svg>
+          <h3>Наружная реклама</h3>
+          <p>Баннеры, билборды, световые вывески.</p>
+        </div>
+        <div class="card">
+          <!-- Сувенирная продукция -->
+          <svg class="icon-svg" viewBox="0 0 256 256" aria-hidden="true">
+            <rect class="stroke" x="40" y="92" width="176" height="116" rx="10"></rect>
+            <rect class="fill-brand" x="120" y="92" width="16" height="116"></rect>
+            <path class="stroke" d="M92 92c0-24 16-40 36-40s36 16 36 40" ></path>
+            <path class="stroke" d="M88 92h80"></path>
+          </svg>
+          <h3>Сувенирная продукция</h3>
+          <p>Кружки, футболки, ручки, флешки.</p>
+        </div>
+        <div class="card">
+          <!-- Канцелярия -->
+          <svg class="icon-svg" viewBox="0 0 256 256" aria-hidden="true">
+            <rect class="stroke" x="48" y="44" width="160" height="168" rx="12"></rect>
+            <rect class="fill-brand" x="60" y="44" width="24" height="168"></rect>
+            <path class="stroke" d="M96 168l48-72 16 16-48 72-20 4z"></path>
+          </svg>
+          <h3>Канцелярия</h3>
+          <p>Тетради, блокноты, стикеры.</p>
+        </div>
+        <div class="card">
+          <!-- Шопперы -->
+          <svg class="icon-svg" viewBox="0 0 256 256" aria-hidden="true">
+            <path class="stroke" d="M64 100h128l-16 112H80L64 100z"></path>
+            <path class="fill-brand" d="M80 116h96l-12 84H92z"></path>
+            <path class="stroke" d="M100 100c0-20 12-32 28-32s28 12 28 32"></path>
+          </svg>
+          <h3>Шопперы</h3>
+          <p>Индивидуальный пошив и брендирование.</p>
+        </div>
+        <div class="card">
+          <!-- SMM и дизайн соцсетей -->
+          <svg class="icon-svg" viewBox="0 0 256 256" aria-hidden="true">
+            <rect class="stroke" x="64" y="32" width="128" height="192" rx="16"></rect>
+            <rect class="fill-brand" x="76" y="72" width="104" height="112" rx="8"></rect>
+            <circle cx="128" cy="196" r="6" fill="#111"></circle>
+          </svg>
+          <h3>SMM и дизайн соцсетей</h3>
+          <p>Создание визуального контента и оформление профилей.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h2 class="sec-title">Портфолио</h2>
+      <div class="gallery">
+        <img loading="lazy" src="https://picsum.photos/seed/promo1/400/300" alt="Пример 1" />
+        <img loading="lazy" src="https://picsum.photos/seed/promo2/400/300" alt="Пример 2" />
+        <img loading="lazy" src="https://picsum.photos/seed/promo3/400/300" alt="Пример 3" />
+        <img loading="lazy" src="https://picsum.photos/seed/promo4/400/300" alt="Пример 4" />
+        <img loading="lazy" src="https://picsum.photos/seed/promo5/400/300" alt="Пример 5" />
+        <img loading="lazy" src="https://picsum.photos/seed/promo6/400/300" alt="Пример 6" />
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="container split">
+      <div>
+        <h2 class="sec-title">Оставить предварительный заказ</h2>
+        <p class="sec-lead">Заполните форму — перезвоним в рабочее время и уточним детали. Можно также заказать обратный звонок.</p>
+        <form onsubmit="return submitForm(event)">
+          <input class="input" type="text" name="name" placeholder="Ваше имя" required>
+          <input class="input" type="tel" name="phone" placeholder="Телефон" required pattern="[+0-9\s()-]{6,}">
+          <textarea class="input" name="message" placeholder="Расскажите о задаче (формат, тираж, сроки)"></textarea>
+          <button class="btn" type="submit">Отправить заявку</button>
+          <p class="note">Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+        </form>
+      </div>
+      <div id="contacts">
+        <div class="card">
+          <h3 style="margin-top:0">Контакты</h3>
+          <p><strong>Адрес:</strong> г. Пермь, ул. Ленина</p>
+          <p><strong>Тел.:</strong> <a href="tel:+73422134567">(342) 213‑45‑67</a></p>
+          <p><strong>E‑mail:</strong> <a href="mailto:promostar@mail.ru">promostar@mail.ru</a></p>
+          <div class="social" aria-label="Социальные сети">
+            <a href="https://vk.com/club233349095" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте — PromoStar">VK</a>
+          </div>
+        </div>
+        <div class="card" style="margin-top:12px;background:linear-gradient(135deg,#fffef2,#fff9cc);border-style:dashed">
+          <strong>Нужно срочно?</strong>
+          <p style="margin:6px 0 0">Позвоните нам — обсудим задачу и предложим решение сегодня.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <div class="logo" aria-label="PromoStar — рекламное агентство" style="gap:8px;">
+        <span class="wordmark">PromoStar</span>
+        <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+          <defs>
+            <linearGradient id="starFooter" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#FFD700"/>
+              <stop offset="1" stop-color="#FFE780"/>
+            </linearGradient>
+          </defs>
+          <polygon points="12,2 15,9 22,9 16.5,13.5 19,21 12,16.8 5,21 7.5,13.5 2,9 9,9" fill="url(#starFooter)"/>
+        </svg>
+      </div>
+      <div style="text-align:right; display:grid; gap:6px; justify-items:end;">
+        <div>г. Пермь, ул. Ленина · <a href="tel:+73422134567">(342) 213‑45‑67</a> · <a href="mailto:promostar@mail.ru">promostar@mail.ru</a></div>
+        <div><a href="https://vk.com/club233349095" target="_blank" rel="noopener noreferrer">Наше сообщество ВКонтакте</a></div>
+        <div>© <span id="y"></span> PromoStar. Все права защищены.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    function submitForm(e){
+      e.preventDefault();
+      const name = e.target.name.value.trim();
+      alert('Спасибо, ' + name + '! Ваша заявка принята.');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
